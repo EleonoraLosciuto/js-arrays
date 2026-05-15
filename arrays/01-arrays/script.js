@@ -46,10 +46,10 @@ let NumElementi = teachers.length
 console.log(NumElementi)
 
 if (NumElementi === 0) {
-isTeachersEmpty = true
-console.log(`l'array é vuoto`)}
+  isTeachersEmpty = true
+  console.log(`l'array é vuoto`)}
 else {
-isTeachersEmpty = false
-console.log(`l'array non é vuoto: contiene ${NumElementi} elementi`)};
+  isTeachersEmpty = false
+  console.log(`l'array non é vuoto: contiene ${NumElementi} elementi`)};
 
 console.log(isTeachersEmpty);

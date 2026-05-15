@@ -12,7 +12,7 @@ const teachers = [
 // e salva il risultato nella variabile reversedTeachers
 const reversedTeachers = []; // I declare the array initially as empty
 
-for (i = 0; i < teachers.length; i++) // loop for for each element of the array
+for (let i = 0; i < teachers.length; i++) // loop for for each element of the array
 {
   reversedTeachers.unshift(teachers[i]); // I use unshift to add every element at the beginning of the array, returning the reversed array
 }
@@ -23,7 +23,7 @@ console.log(reversedTeachers);
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
 const longNames = [];
 
-for (i = 0; i < teachers.length; i++) // same as above
+for (let i = 0; i < teachers.length; i++) // same as above
 {
   if (teachers[i].length > 4) longNames.push(teachers[i]); // if function to check if the element lenght is >= 5
 }
@@ -31,12 +31,20 @@ for (i = 0; i < teachers.length; i++) // same as above
 console.log(longNames);
 
 // 3. Rimuovi 'Ed' dall'array teachers
-teachers.splice(teachers.indexOf("Ed"), 1)
+teachers.splice(teachers.indexOf("Ed"), 1);
 console.log(teachers);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
-const isFabioPresent = null;
+const isFabioPresent = teachers.indexOf("Fabio") !== -1
+console.log(isFabioPresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-const teachersString = null;
+let teachersString = ""; // I change const to let in order to be able to modify the value of teacherString
+
+for (let i = 0; i < teachers.length; i++) // same as above
+{
+  if (i === (teachers.length - 1))  {teachersString += `${teachers[i]}`} // the last items shoud not have the comma
+  else {teachersString += `${teachers[i]},`};
+};
+console.log(teachersString);
