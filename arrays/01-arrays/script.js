@@ -18,6 +18,8 @@ console.log(fourthTeacher);
 teachers.splice(4, 1, "Patrick"); // Delete elements starting from index 4, delete count 1 (delete one element), item to add "Patrick"
 console.log(teachers);
 
+// I could simply use teachers[4] = "Patrick"
+
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
 const lastTeacher = teachers.pop(); // To remove last item I use pop()
 console.log(lastTeacher, teachers);
@@ -39,17 +41,20 @@ console.log(teachers);
 const lewisIndex = teachers.indexOf("Lewis"); // to find the index of a string I use indexOf()
 console.log(lewisIndex);
 
+// altro approccio
+let idx = -1;
+for (let i = 0; i < teachers.lenght; i++) {
+  if (teachers[i] === "Lewis") idx 
+}
+
+
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-let isTeachersEmpty
-let NumElementi = teachers.length
-console.log(NumElementi)
+const isTeachersEmpty = teachers.length === 0;
 
-if (NumElementi === 0) {
-  isTeachersEmpty = true
+if (isTeachersEmpty) {
   console.log(`l'array é vuoto`)}
 else {
-  isTeachersEmpty = false
-  console.log(`l'array non é vuoto: contiene ${NumElementi} elementi`)};
+  console.log(`l'array non é vuoto: contiene ${teachers.length} elementi`)};
 
 console.log(isTeachersEmpty);

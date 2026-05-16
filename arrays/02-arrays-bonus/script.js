@@ -17,6 +17,10 @@ for (let i = 0; i < teachers.length; i++) // loop for for each element of the ar
   reversedTeachers.unshift(teachers[i]); // I use unshift to add every element at the beginning of the array, returning the reversed array
 }
 
+// Altro metodo revershedTeachers.push(teachers.at-(i+1))
+// altro metodo push ma ciclo al contrario --> for (let i = teachers.length; i > 0; i--)
+// oppure teachers.toReversed() --> esiste anche funzione reverse ma mi modifica l'array originario / con toReversed mi crea una copia
+
 console.log(reversedTeachers);
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
@@ -39,6 +43,11 @@ console.log(teachers);
 const isFabioPresent = teachers.indexOf("Fabio") !== -1
 console.log(isFabioPresent);
 
+// oppure teachers.includes("Fabio")
+// let isPresent = false;
+// for (let i=0; i < teachers.lenght; i++) {if(teachers[i] === "Fabio ") isPresent = true break}
+
+
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
 let teachersString = ""; // I change const to let in order to be able to modify the value of teacherString
 
@@ -48,3 +57,5 @@ for (let i = 0; i < teachers.length; i++) // same as above
   else {teachersString += `${teachers[i]},`};
 };
 console.log(teachersString);
+
+// altro metodo é join --> teachers.join()
